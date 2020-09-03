@@ -1,0 +1,13 @@
+{
+  "name": "parcel-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug"
+  },
+  "devDependencies": {
+    "sass": "^1.26.10"
+  }
+}

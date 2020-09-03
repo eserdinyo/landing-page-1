@@ -1,0 +1,1 @@
+{"version":3,"sources":["style/components/_header.scss"],"names":[],"mappings":"AAAA;EACE;EACA;EACA;;AAEA;EACE","file":"main.3d6386d6.css","sourceRoot":"../src","sourcesContent":["body {\n  background-color: black;\n  color: #fff;\n  text-align: center;\n\n  a:hover {\n    color: yellow;\n  }\n}\n"]}
