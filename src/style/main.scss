@@ -1,3 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne&display=swap");
+
+@import "global/mixins";
 @import "components/header";
 @import "global/config";
 @import "helper/normalize";
+
+.hero {
+  margin-top: 30px;
+  &_wrapper {
+    text-align: center;
+    font-size: 48px;
+    width: 70%;
+    margin: 0 auto;
+  }
+  &_img {
+    margin-top: 20px;
+    width: 100%;
+    min-height: 65vh;
+  }
+}
+
+.employees {
+  margin-top: 40px;
+  &_wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+  }
+
+  .employee {
+    img {
+      width: 100%;
+    }
+
+    &_name {
+      text-align: center;
+      font-size: 31px;
+      margin-bottom: 10px;
+    }
+
+    &_title {
+      font-size: 14px;
+      text-align: center;
+    }
+
+    &_more {
+      color: #a8a6a1;
+      margin-top: 20px;
+      font-size: 14px;
+      text-decoration: underline;
+      cursor: pointer;
+      text-align: center;
+    }
+  }
+}
+
+.newsletter {
+  text-align: center;
+  padding: 60px 0;
+
+  img {
+    margin-bottom: 40px;
+  }
+
+  &_title {
+    font-size: 31px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+  &_desc {
+    padding: 20px 0;
+    margin-bottom: 20px;
+    font-size: 17px;
+  }
+
+  input {
+    padding: 1.4rem 2rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    margin-right: 12px;
+    min-width: 180px;
+    width: 250px;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: #000;
+    }
+    &:focus {
+      outline: 1px solid #000;
+      outline-offset: 5px;
+      outline-width: 2px;
+    }
+    &::placeholder {
+      color: #a8a6a1;
+    }
+  }
+
+  button {
+    padding: 1.4rem 2rem !important;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    background-color: #a8a6a1;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #a8a6a1e5;
+    }
+  }
+}
+
+.Footer {
+  text-align: center;
+  padding: 80px 0;
+  p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+    color: #191919;
+    line-height: 24px;
+  }
+  img {
+    height: 25px;
+    margin: 0 10px;
+  }
+}
+
+@include res(desktop) {
+  .employees {
+    margin-top: 40px;
+    &_wrapper {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 30px;
+    }
+  }
+
+  .hero_wrapper {
+    font-size: 30px;
+    width: 100%;
+  }
+
+  .hero_img {
+    min-height: 45vh;
+  }
+
+  .newsletter_title {
+    font-size: 22px;
+    width: 75%;
+  }
+  .newsletter input {
+    margin-right: 0;
+  }
+  .newsletter button {
+    margin-top: 30px;
+  }
+
+  .Footer p {
+    width: 100%;
+  }
+  .Footer {
+    padding: 50px 0;
+  }
+}

@@ -1,8 +1,18 @@
 html(lang='en')
   head
     title Parcel boilerplate
-    link(rel="stylesheet", href="./style/main.scss")
+    link(rel="stylesheet" href="./style/main.scss")
+    link(rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js")
   body
     include components/header.pug
-    include components/body.pug
+    include components/hero.pug
+    include components/employees.pug
+    include components/newsletter.pug
     include components/footer.pug
+
+    script(src="https://unpkg.com/aos@next/dist/aos.js")
+    script.
+      AOS.init();
+

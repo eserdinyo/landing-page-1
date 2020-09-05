@@ -1,2 +1,10 @@
-.Header
-  | Header
+.Header(:class="{ 'Header_active': isOpen === true }" x-data="{ isOpen: false }")
+  .container
+    .Header_wrapper
+      .Header_overlay( x-show="isOpen")
+      .Header_nav(:class="{ 'Header_nav-active': isOpen === true }")
+        a.Header_nav-item.Header_nav-item-active() Home
+        a.Header_nav-item() About
+      .Header_logo
+        a Books Read By
+      .Header_ham(:class="{ 'Header_ham-active': isOpen === true }", @click="isOpen = !isOpen")
